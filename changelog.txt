@@ -1,0 +1,4 @@
+*** Cron Helper For WooCommerce Bookings Changelog ***
+
+2020-08-19 - version 1.0.0
+* Initial release.
