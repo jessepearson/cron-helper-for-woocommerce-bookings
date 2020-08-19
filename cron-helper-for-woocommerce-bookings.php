@@ -6,7 +6,7 @@
  * Author: Jesse Pearson
  * Author URI: https://jessepearson.net
  * Text Domain: cron-helper-for-wcb
- * Version: 1.0.0
+ * Version: 1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ if ( ! class_exists( 'Cron_Helper_For_WCB' ) ) {
 	 * Main class.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.0
+	 * @version  1.0.1
 	 */
 	class Cron_Helper_For_WCB {
 
@@ -101,7 +101,7 @@ if ( ! class_exists( 'Cron_Helper_For_WCB' ) ) {
 		 * This will set Paid and Confirmed bookings to Completed if their time has passed.
 		 *
 		 * @since    1.0.0
-		 * @version  1.0.0
+		 * @version  1.0.1
 		 */
 		public function maybe_complete_bookings() {
 			// If Bookings isn't active, exit.
@@ -115,7 +115,7 @@ if ( ! class_exists( 'Cron_Helper_For_WCB' ) ) {
 				'date_before'  => current_time( 'timestamp' ),
 			] );
 
-			if ( count( $booking_ids > 0 ) ) {
+			if ( count( $booking_ids ) > 0 ) {
 				// Get the Cron manager object and mark the bookings as complete.
 				$cron_manager = new WC_Booking_Cron_Manager();
 				foreach( $booking_ids as $id ) {
